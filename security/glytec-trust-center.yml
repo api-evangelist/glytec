@@ -1,0 +1,48 @@
+generated: '2026-08-04'
+method: searched
+probe: true
+url: https://trust.glytec.com/
+platform: SafeBase
+access: gated
+notes: >-
+  trust.glytec.com is a live Glytec-owned hostname that 301-redirects to a SafeBase trust portal
+  (https://app.safebase.io/portal/8299b4b1-9453-4990-8635-127021c41ec4/preview). The portal itself is
+  behind SafeBase authentication (302 to auth.safebase.io/authorize), so the document set — SOC reports,
+  policies, subprocessor list — could not be enumerated anonymously. The certifications recorded below
+  come from Glytec's own PUBLIC security and compliance page, not from the gated portal.
+certifications:
+- HITRUST CSF
+- HIPAA
+- FDA 510(k) clearance (Class II Software as a Medical Device)
+public_compliance_page: https://glytec.com/glytec-one-platform/security-and-compliance/
+claims:
+- claim: HIPAA
+  quote: >-
+    GlytecOne's full platform architecture is designed and maintained in compliance with HIPAA requirements.
+  source: https://glytec.com/glytec-one-platform/security-and-compliance/
+- claim: HITRUST CSF certified
+  quote: >-
+    HITRUST CSF certification validates that GlytecOne meets the rigorous information security and risk
+    management requirements.
+  source: https://glytec.com/glytec-one-platform/security-and-compliance/
+- claim: FDA-cleared Class II Software as a Medical Device
+  quote: >-
+    Glucommander is an FDA-cleared Class II Software as a Medical Device (SaMD), subject to ongoing quality
+    system requirements, post-market surveillance, and device change controls.
+  source: https://glytec.com/glytec-one-platform/security-and-compliance/
+not_found:
+- SOC 2 (not named on the public compliance page)
+- ISO 27001 (not named on the public compliance page)
+- PCI DSS (not applicable / not named)
+- FedRAMP (not named)
+- Published penetration-test summary
+- Named security contact or responsible-disclosure policy
+evidence:
+- source: https://trust.glytec.com/
+  http_status: 301
+  redirects_to: https://app.safebase.io/portal/8299b4b1-9453-4990-8635-127021c41ec4/preview?product=default
+  observed: '2026-08-04'
+- source: https://glytec.com/glytec-one-platform/security-and-compliance/
+  http_status: 200
+  keywords: [hipaa, hitrust csf, fda-cleared, samd, cloud-based]
+  observed: '2026-08-04'

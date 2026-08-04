@@ -1,0 +1,77 @@
+generated: '2026-08-04'
+method: searched
+source: https://glytec.com/support-policy/ + https://glytec.com/faqs/
+scope: >-
+  Glytec ships no public API, so this records the SOFTWARE/RELEASE lifecycle published in its Maintenance and
+  Support Policy rather than an API versioning contract.
+versioning:
+  scheme: product-release
+  notes: >-
+    Product releases are versioned (e.g. "Glucommander 3.5.3.0" referenced in the newsroom). There is no
+    public API version identifier, no dated version train, and no published version-history page.
+  supported_versions: >-
+    "the most-current release and the next most current release" — support is limited to the two most recent
+    releases, which is the vendor's de facto end-of-life policy for older releases.
+  docs: https://glytec.com/support-policy/
+deprecation:
+  policy_documented: true
+  policy_url: https://glytec.com/support-policy/
+  mechanism: supported-release-window
+  notes: >-
+    Deprecation is expressed as a supported-release window (current + previous release) in the Maintenance and
+    Support Policy, not as an API deprecation/sunset policy. No RFC 8594 Sunset/Deprecation header support is
+    documented (there is no public API to carry one).
+  sunset_header: false
+support:
+  url: https://glytec.com/contact-us/
+  policy_url: https://glytec.com/support-policy/
+  model: tiered
+  tiers:
+  - tier: 1
+    owner: customer
+    notes: Customer provides the first response and analysis of all issues.
+  - tier: 2
+    owner: glytec
+    notes: Customer escalates unresolved issues to Glytec customer support.
+  severity_levels:
+  - level: 1
+    description: Significant disruption preventing necessary functions.
+    hours: 24x7x365
+  - level: 2
+    description: Significant functionality inoperative.
+    hours: 24x7x365 for Glucommander; 8:00am-8:00pm ET Mon-Fri for other services
+  - level: 3
+    description: Minor functionality issues.
+    hours: routine business hours
+    remedy: Fix targeted for the next regular maintenance release.
+  - level: 4
+    description: Documentation bugs or enhancement requests.
+    hours: routine business hours
+  channels: [telephone, email]
+  notes: 24/7 clinical support after implementation (not a generalist help desk).
+maintenance_window:
+  schedule: >-
+    Last Thursday of the month, 12:00am through 4:00am the following Thursday (Eastern Time).
+  advance_notice: two (2) weeks
+  source: https://glytec.com/support-policy/
+sla:
+  documented: false
+  notes: No public uptime target or credit schedule; SLA terms are contract-delivered.
+status_page:
+  url: null
+  notes: >-
+    No public status page located. status.glytec.com does not resolve; glytec.statuspage.io and
+    glytecone.statuspage.io redirect to the Atlassian Statuspage marketing site (no tenant).
+implementation:
+  typical_duration: 8 to 16 weeks from contract to go-live for a standard single-facility implementation
+  phases:
+  - weeks 1-4: discovery and EHR integration configuration
+  - weeks 5-8: pilot launch
+  - weeks 9-16: full deployment
+  source: https://glytec.com/faqs/
+changelog:
+  url: null
+  notes: >-
+    No dated public changelog or release-notes feed. Release news appears only as press items under
+    https://glytec.com/newsroom/ and https://glytec.com/press-releases/.
+deprecated_operations: []

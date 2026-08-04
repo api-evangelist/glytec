@@ -1,17 +1,44 @@
 aid: glytec
 name: Glytec
-description: 'Glytec is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Glytec is a healthcare software company, founded in 2006, that builds GlytecOne — a cloud-based enterprise
+  glycemic and insulin management platform used by 400+ hospitals and health systems in the United States. Its
+  core product, Glucommander, is an FDA-cleared Class II Software as a Medical Device that computes personalized
+  IV and subcutaneous insulin dosing recommendations for adult and pediatric (ages 2-17) patients from real-time
+  and historical glucose data and returns them into the clinician's workflow for review. The platform also
+  includes Command Center, performance insights and analytics, population health, and CMS/eCQM reporting for the
+  CMS816 severe hypoglycemia and CMS871 severe hyperglycemia hospital harm measures. Glytec publishes no public
+  developer API or machine-readable specification: integration is delivered under contract as bi-directional
+  HL7 interfaces plus single sign-on clinical decision support into Epic, Oracle Health (Cerner) and MEDITECH,
+  with a Glucommander listing in the Epic Showroom. The platform is maintained in compliance with HIPAA and is
+  HITRUST CSF certified.
+image: https://glytec.com/wp-content/uploads/2026/03/glytecOneLogo.svg
 url: https://raw.githubusercontent.com/api-evangelist/glytec/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
 x-tier-reason: harvest
-specificationVersion: '0.20'
+specificationVersion: '0.21'
 created: '2026-08-04'
 modified: '2026-08-04'
+x-enrichment:
+  date: '2026-08-04'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1
 tags:
 - Company
+- healthcare
+- health-it
+- clinical-decision-support
+- diabetes
+- insulin-management
+- glycemic-management
+- hospital
+- ehr-integration
+- hl7
+- medical-device
+- software-as-a-medical-device
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +47,64 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://glytec.com/
+- type: About
+  url: https://glytec.com/company/about/
+- type: Platform
+  url: https://glytec.com/glytec-one-platform/
+- type: Integrations
+  url: https://glytec.com/glytec-one-platform/ehr-integrations/
+- type: Integrations
+  url: integrations/_index.yml
+- type: Marketplace
+  url: https://showroom.epic.com/Listing?appId=25328
+- type: Support
+  url: https://glytec.com/contact-us/
+- type: SupportPolicy
+  url: https://glytec.com/support-policy/
+- type: Deprecation
+  url: https://glytec.com/support-policy/
+- type: FAQ
+  url: https://glytec.com/faqs/
+- type: Blog
+  url: https://glytec.com/blog/
+- type: BlogRSS
+  url: https://glytec.com/feed/
+- type: PressReleases
+  url: https://glytec.com/press-releases/
+- type: CaseStudies
+  url: https://glytec.com/information-hub/case-studies/
+- type: WhitePapers
+  url: https://glytec.com/information-hub/whitepapers/
+- type: Login
+  url: https://app.glytec.com/
+- type: Demo
+  url: https://glytec.com/request-demo/
+- type: TermsOfService
+  url: https://glytec.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://glytec.com/privacy-policy/
+- type: Compliance
+  url: https://glytec.com/glytec-one-platform/security-and-compliance/
+- type: TrustCenter
+  url: security/glytec-trust-center.yml
+- type: Conformance
+  url: conformance/glytec-conformance.yml
+- type: DomainSecurity
+  url: security/glytec-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/glytec-lifecycle.yml
+- type: LLMsTxt
+  url: llms/glytec-llms.txt
+- type: Careers
+  url: https://glytec.com/careers/
+- type: Leadership
+  url: https://glytec.com/company/leadership-team/
+- type: InvestorRelations
+  url: https://glytec.com/company/investor-relations/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/glytec-llc
+- type: Twitter
+  url: https://x.com/glytec
+- type: Forge
   url: https://forgeglobal.com/glytec_stock/

@@ -1,0 +1,43 @@
+generated: '2026-08-04'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + application hosts
+hosts:
+- host: glytec.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 20 20:03:50 2026 GMT
+  hsts: null
+- host: app.glytec.com
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Dec 16 23:59:59 2026 GMT
+  hsts: null
+  notes: >-
+    GlytecOne Command Center tenant login (organization-scoped). Root returns 302 into the login flow.
+    Fronted by an AWS ELB (k8s-prod01cluster-*.us-east-2.elb.amazonaws.com).
+- host: glytecsystems.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  7 20:24:14 2026 GMT
+  hsts: null
+  notes: Legacy corporate domain; 301 redirects to https://glytec.com/.
+domains:
+- domain: glytec.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: glytecsystems.com
+  dnssec: false
+  caa:
+  - 0 issue "letsencrypt.org"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+findings:
+- No HSTS response header observed on any Glytec host.
+- No CAA record on glytec.com; glytecsystems.com pins issuance to letsencrypt.org.
+- DNSSEC not enabled on either registrable domain.
+- DMARC published at p=quarantine on both domains (glytecsystems.com sets sp=none for subdomains).
+- No /.well-known/security.txt on any host, so no machine-readable security contact is advertised.

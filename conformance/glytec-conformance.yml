@@ -1,0 +1,94 @@
+generated: '2026-08-04'
+method: searched
+source: >-
+  https://glytec.com/glytec-one-platform/ehr-integrations/ +
+  https://glytec.com/glytec-one-platform/security-and-compliance/ +
+  https://glytec.com/glytec-one-platform/cms-and-ecqm-compliance/ + https://glytec.com/faqs/
+scope: >-
+  Glytec publishes no public developer API and no machine-readable specification, so every entry below is
+  asserted from the vendor's own published integration and compliance documentation rather than derived from
+  an OpenAPI/AsyncAPI document. Entries marked conforms:false are recorded as absence of a public claim, not
+  as a failed test.
+standards:
+- id: hl7-v2
+  conforms: true
+  evidence: >-
+    "Integration includes HL7 interfaces for standard data exchange" and "HL7 interface for Insulin Dosing";
+    bi-directional glucose-in / dosing-out message flow with Epic, Oracle Health (Cerner) and MEDITECH.
+    HL7 version is not stated publicly; documented as HL7 interfaces (v2-style messaging) only.
+  source: https://glytec.com/glytec-one-platform/ehr-integrations/
+- id: hipaa
+  conforms: true
+  evidence: >-
+    "GlytecOne's full platform architecture is designed and maintained in compliance with HIPAA requirements."
+  source: https://glytec.com/glytec-one-platform/security-and-compliance/
+- id: hitrust-csf
+  conforms: true
+  evidence: >-
+    "HITRUST CSF certification validates that GlytecOne meets the rigorous information security and risk
+    management requirements."
+  source: https://glytec.com/glytec-one-platform/security-and-compliance/
+- id: fda-510k-samd
+  conforms: true
+  evidence: >-
+    "Glucommander is an FDA-cleared Class II Software as a Medical Device (SaMD)" — prescription-only device,
+    indicated for adult and pediatric (ages 2-17) patients, United States only.
+  source: https://glytec.com/glytec-one-platform/security-and-compliance/
+- id: cms-ecqm
+  conforms: true
+  evidence: >-
+    Platform markets CMS/eCQM reporting for the CMS816 severe hypoglycemia and CMS871 severe hyperglycemia
+    hospital harm measures.
+  source: https://glytec.com/glytec-one-platform/cms-and-ecqm-compliance/
+- id: single-sign-on
+  conforms: true
+  evidence: >-
+    "Single sign-on clinical decision support reduces login friction for clinical staff." The SSO standard
+    (SAML / OIDC / Epic launch) is not named publicly.
+  source: https://glytec.com/faqs/
+- id: fhir-r4
+  conforms: false
+  evidence: FHIR is not named anywhere on the public integration, FAQ or platform pages; only HL7 interfaces are described.
+- id: smart-on-fhir
+  conforms: false
+  evidence: No SMART on FHIR launch or scope documentation published.
+- id: cds-hooks
+  conforms: false
+  evidence: No CDS Hooks service or discovery endpoint documented.
+- id: openapi
+  conforms: false
+  evidence: >-
+    No OpenAPI/Swagger document found. Probed /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json,
+    /swagger/v1/swagger.json, /api-docs and /docs on glytec.com and app.glytec.com — all 404 (HTML shell).
+- id: graphql
+  conforms: false
+  evidence: No /graphql surface located on any Glytec host.
+- id: asyncapi
+  conforms: false
+  evidence: No event, streaming or webhook surface is published; integration is HL7 interface-based and contract-delivered.
+- id: mcp
+  conforms: false
+  evidence: No hosted Model Context Protocol server found.
+- id: a2a-agent-card
+  conforms: false
+  evidence: >-
+    /.well-known/agent-card.json and /.well-known/agent.json return 404 on glytec.com and app.glytec.com.
+- id: oauth2
+  conforms: false
+  evidence: /.well-known/oauth-authorization-server returns 404 on all hosts; no public OAuth documentation.
+- id: oidc-discovery
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404 on all hosts.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on glytec.com and app.glytec.com.
+- id: rfc8615-well-known-api-catalog
+  conforms: false
+  evidence: /.well-known/api-catalog returns 404 on all hosts.
+- id: llmstxt
+  conforms: true
+  evidence: >-
+    https://glytec.com/llms.txt returns 200 text/plain with a structured llms.txt document (site intent,
+    product entities, authoritative resources, contact and AI usage notes). Captured verbatim at
+    llms/glytec-llms.txt.
+  source: https://glytec.com/llms.txt

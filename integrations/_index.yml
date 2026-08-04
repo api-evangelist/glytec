@@ -1,0 +1,51 @@
+generated: '2026-08-04'
+method: searched
+source: >-
+  https://glytec.com/glytec-one-platform/ehr-integrations/ + https://glytec.com/faqs/ +
+  https://showroom.epic.com/Listing?appId=25328
+notes: >-
+  Listing-only. Glytec's integration surface is contract-delivered HL7 interfacing plus single sign-on
+  clinical decision support — there is no public OpenAPI on the Glytec side and no published operation
+  inventory, so no Arazzo workflow can be authored without inventing operations. Every entry below is
+  therefore arazzo: null / status: pending-provider-spec. Direction is described by Glytec as
+  "bi-directional EHR interoperability": glucose values flow in from the EHR, dosing recommendations flow
+  back for clinician review, and clinician-confirmed doses are written back as automated insulin
+  documentation.
+integrations:
+- slug: epic
+  label: Epic
+  partner: Epic Systems
+  category: ehr
+  use_case: >-
+    Glucose values pass from Epic to Glucommander and dosing recommendations are returned for clinician
+    review directly within the Epic environment, with single sign-on clinical decision support and automated
+    insulin documentation written back to the chart.
+  mechanism: [hl7-interface, single-sign-on]
+  listing: https://showroom.epic.com/Listing?appId=25328
+  notes: >-
+    Glucommander is listed in the Epic Showroom. Glytec states it has performed 150+ Epic integrations and
+    that Glucommander 3.5.3.0 supports Epic's web-based Hyperspace client.
+  arazzo: null
+  status: pending-provider-spec
+- slug: oracle-health
+  label: Oracle Health (Cerner)
+  partner: Oracle Health
+  category: ehr
+  use_case: Bi-directional glycemic data exchange and insulin dosing decision support inside the Oracle Health EHR.
+  mechanism: [hl7-interface, single-sign-on]
+  listing: null
+  arazzo: null
+  status: pending-provider-spec
+- slug: meditech
+  label: MEDITECH
+  partner: MEDITECH
+  category: ehr
+  use_case: Bi-directional glycemic data exchange and insulin dosing decision support inside the MEDITECH EHR.
+  mechanism: [hl7-interface, single-sign-on]
+  listing: null
+  arazzo: null
+  status: pending-provider-spec
+coverage:
+  integrations_listed: 3
+  with_arazzo: 0
+  reason: no public machine-readable contract on the Glytec side
