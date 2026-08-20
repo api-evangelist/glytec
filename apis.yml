@@ -28,6 +28,19 @@ x-enrichment:
   pass: local-v1
 tags:
 - Company
+- Healthcare
+- Health IT
+- Clinical Decision Support
+- Diabetes
+- Insulin Management
+- glycemic-management
+- Hospital
+- EHR Integration
+- HL7
+- Medical Device
+- Software as a Medical Device
+tags_raw:
+- Company
 - healthcare
 - health-it
 - clinical-decision-support
