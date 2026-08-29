@@ -12,6 +12,17 @@ description: >-
   HL7 interfaces plus single sign-on clinical decision support into Epic, Oracle Health (Cerner) and MEDITECH,
   with a Glucommander listing in the Epic Showroom. The platform is maintained in compliance with HIPAA and is
   HITRUST CSF certified.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://glytec.com/wp-content/uploads/2026/03/glytecOneLogo.svg
 url: https://raw.githubusercontent.com/api-evangelist/glytec/refs/heads/main/apis.yml
 x-type: company
